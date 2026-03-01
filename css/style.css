@@ -1003,11 +1003,18 @@ body {
     }
 }
 
-/* Hero content initial state */
+/* Hero content - animation d'apparition garantie même sans JS */
+@keyframes heroReveal {
+    0%   { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
 .hero-content {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease, transform 0.8s ease;
+    /* Fallback CSS : si le JS ne s'exécute pas, le contenu apparaît quand même */
+    animation: heroReveal 0.8s ease 0.2s forwards;
 }
 
 /* Bouton scroll to top */
