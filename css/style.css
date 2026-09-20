@@ -253,3 +253,20 @@ button,a,input,select,textarea{min-width:0}
     max-width:calc(100vw - 64px) !important;
   }
 }
+
+/* Premium foreground confirmation after successful contact submit */
+.send-confirmation{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;padding:24px;background:rgba(3,5,9,.38);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .28s ease,visibility .28s ease}
+.send-confirmation.show{opacity:1;visibility:visible}
+.send-confirmation-card{width:min(420px,calc(100vw - 32px));padding:34px 28px 30px;border:1px solid rgba(255,255,255,.12);border-radius:28px;background:rgba(17,20,27,.92);box-shadow:0 30px 90px rgba(0,0,0,.5);text-align:center;transform:translateY(18px) scale(.94);opacity:0}
+.send-confirmation.show .send-confirmation-card{animation:confirmCard 3s cubic-bezier(.2,.8,.2,1) both}
+.success-ring{width:74px;height:74px;margin:0 auto 20px}
+.success-ring svg{width:100%;height:100%;fill:none;stroke:#fff;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.success-ring circle{opacity:.18}
+.success-ring path{stroke-dasharray:36;stroke-dashoffset:36}
+.send-confirmation.show .success-ring path{animation:confirmCheck .55s .2s ease forwards}
+.send-confirmation-card strong{display:block;font-size:24px;letter-spacing:-.03em}
+.send-confirmation-card span{display:block;margin-top:8px;color:var(--muted);font-size:14px;line-height:1.45}
+@keyframes confirmCheck{to{stroke-dashoffset:0}}
+@keyframes confirmCard{0%{opacity:0;transform:translateY(18px) scale(.94)}10%,82%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-10px) scale(.98)}}
+@media(max-width:520px){.send-confirmation{padding:16px}.send-confirmation-card{width:100%;padding:30px 20px 27px;border-radius:24px}.success-ring{width:68px;height:68px}.send-confirmation-card strong{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.send-confirmation.show .send-confirmation-card{animation:none;opacity:1;transform:none}.send-confirmation.show .success-ring path{animation:none;stroke-dashoffset:0}}
