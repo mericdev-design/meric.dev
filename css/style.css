@@ -270,3 +270,15 @@ button,a,input,select,textarea{min-width:0}
 @keyframes confirmCard{0%{opacity:0;transform:translateY(18px) scale(.94)}10%,82%{opacity:1;transform:none}100%{opacity:0;transform:translateY(-10px) scale(.98)}}
 @media(max-width:520px){.send-confirmation{padding:16px}.send-confirmation-card{width:100%;padding:30px 20px 27px;border-radius:24px}.success-ring{width:68px;height:68px}.send-confirmation-card strong{font-size:22px}}
 @media(prefers-reduced-motion:reduce){.send-confirmation.show .send-confirmation-card{animation:none;opacity:1;transform:none}.send-confirmation.show .success-ring path{animation:none;stroke-dashoffset:0}}
+
+/* Foreground success popup — modal treatment */
+.send-confirmation{background:rgba(0,0,0,.62)!important;backdrop-filter:blur(18px) saturate(.75)!important;-webkit-backdrop-filter:blur(18px) saturate(.75)!important;pointer-events:auto!important}
+.send-confirmation-card{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.16)!important;background:linear-gradient(180deg,rgba(28,31,40,.98),rgba(13,15,20,.98))!important;box-shadow:0 32px 100px rgba(0,0,0,.72),inset 0 1px 0 rgba(255,255,255,.06)!important}
+.send-confirmation-card strong{font-size:26px!important}
+.send-confirmation-card span{margin-top:10px!important;font-size:14px!important;line-height:1.55!important}
+.success-ring{display:grid;place-items:center;border-radius:50%;background:rgba(255,255,255,.06)}
+.confirmation-timer{position:absolute;left:0;right:0;bottom:0;height:3px;background:rgba(255,255,255,.08)}
+.confirmation-timer i{display:block;width:100%;height:100%;background:currentColor;transform-origin:left}
+.send-confirmation.show .confirmation-timer i{animation:confirmationTimer 3s linear forwards}
+@keyframes confirmationTimer{to{transform:scaleX(0)}}
+@media(max-width:520px){.send-confirmation-card{max-width:360px!important}.send-confirmation-card strong{font-size:24px!important}}
