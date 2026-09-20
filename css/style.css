@@ -7,3 +7,90 @@
 
 /* Premium vector icon system */
 .svg-icon,.premium-icon,.mini-svg,.check-svg{display:inline-block;vertical-align:middle;fill:none;stroke:currentColor;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}.svg-icon{width:1.05em;height:1.05em}.premium-icon{width:24px;height:24px}.mini-svg{width:14px;height:14px}.check-svg{width:15px;height:15px;margin-right:7px;color:var(--blue);stroke-width:2.25}.orb-icon .premium-icon{width:25px;height:25px}.benefits article>span{width:44px;height:44px;display:grid;place-items:center;border:1px solid var(--line);border-radius:14px;background:var(--panel2)}.benefits article>span .premium-icon{width:22px;height:22px}.float-icon .premium-icon,.float-icon .svg-icon{width:18px;height:18px}.project-top b{display:grid;place-items:center;width:28px;height:28px;border:1px solid rgba(255,255,255,.16);border-radius:9px}.project-top b .svg-icon{width:14px;height:14px}.pricing li{display:flex;align-items:center}.contact-note>span .svg-icon{width:19px;height:19px}.nav-cta .svg-icon,.button .svg-icon,.footer-grid .svg-icon,.text-link .svg-icon{width:14px;height:14px}.menu-btn .svg-icon,.icon-btn .svg-icon{width:20px;height:20px}
+
+/* Responsive hardening — mobile first fixes */
+img,svg,video,canvas{max-width:100%;height:auto}
+html,body{max-width:100%;overflow-x:hidden}
+button,a,input,select,textarea{min-width:0}
+.pricing-extras .chips{flex-wrap:wrap}
+@media(max-width:1024px){
+  .shell{width:min(100% - 32px,1180px)}
+  .navlinks{gap:18px}
+  .hero{min-height:auto;padding-top:165px}
+  .hero-stage{height:430px}
+  .browser{width:min(900px,90vw)}
+  .projects{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .projects .project:last-child{grid-column:1/-1}
+  .benefits{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pricing{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .pricing article:last-child{grid-column:1/-1}
+}
+@media(max-width:850px){
+  .topbar{top:8px}
+  .nav{height:58px;border-radius:18px;padding:7px 8px 7px 13px}
+  .brand{font-size:16px}.brand-mark{width:30px;height:30px}
+  .navlinks{top:66px;box-shadow:var(--shadow);backdrop-filter:blur(28px)}
+  .hero{padding-top:125px}
+  .hero h1{margin-top:22px}
+  .hero-actions{margin-bottom:55px}
+  .section-head{align-items:start}
+  .projects,.pricing{grid-template-columns:1fr}
+  .projects .project:last-child,.pricing article:last-child{grid-column:auto}
+  .process-intro h2{font-size:clamp(38px,9vw,48px)}
+  .contact-form{padding:22px}
+}
+@media(max-width:640px){
+  .shell{width:calc(100% - 24px)}
+  .hero{padding-top:112px}
+  .eyebrow{font-size:9px;letter-spacing:.08em;max-width:100%;white-space:normal;justify-content:center}
+  .hero h1{font-size:clamp(43px,13.5vw,64px);line-height:.98}
+  .hero-copy{font-size:16px;line-height:1.5}
+  .hero-actions{margin:28px 0 42px}
+  .hero-stage{height:300px}
+  .browser{width:100%;height:285px;border-radius:20px}
+  .browser-body{padding:14px 16px}
+  .mini-nav span{display:none}
+  .mini-hero h2{font-size:23px}
+  .trust{padding:38px 0 68px}
+  .trust-row{gap:12px 16px}
+  .section{padding:72px 0}
+  .section-head{margin-bottom:34px}
+  .section h2,.contact-section h2{font-size:clamp(38px,11vw,48px)}
+  .feature-card,.benefits article,.pricing article{padding:25px;border-radius:22px}
+  .feature-card,.feature-card.big,.feature-card.wide{min-height:auto}
+  .feature-card h3{margin-top:48px;font-size:25px}
+  .chips{flex-wrap:wrap}
+  .project-art{height:300px}
+  .store-card strong,.bmw-card strong{font-size:40px}
+  .benefits{grid-template-columns:1fr}
+  .benefits article{min-height:auto}
+  .benefits h3{margin-top:35px}
+  .process{margin-top:55px}
+  .process li{grid-template-columns:45px 1fr}
+  .faq{gap:35px}
+  .accordion summary{gap:18px;line-height:1.4}
+  .contact-section{padding:75px 0}
+  .contact-grid{gap:38px}
+  .contact-form{padding:18px;border-radius:22px}
+  .two{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .footer-grid>div:first-child{grid-column:1/-1}
+}
+@media(max-width:420px){
+  .shell{width:calc(100% - 20px)}
+  .nav{width:calc(100% - 16px)}
+  .icon-btn,.menu-btn{width:39px;height:39px}
+  .hero h1{font-size:clamp(39px,12.5vw,52px)}
+  .hero-copy{font-size:15px}
+  .hero-stage{height:270px}
+  .browser{height:255px}
+  .mini-hero{padding:20px 0}
+  .mini-hero h2{font-size:20px}
+  .project-art{height:270px}
+  .phone{transform:scale(.9) rotate(6deg)}
+  .pricing h3 strong{font-size:34px}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-grid>div:first-child{grid-column:auto}
+  .footline{font-size:9px}
+  .g-recaptcha{transform:scale(.74);height:58px}
+}
