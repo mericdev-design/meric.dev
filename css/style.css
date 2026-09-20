@@ -94,3 +94,30 @@ button,a,input,select,textarea{min-width:0}
   .footline{font-size:9px}
   .g-recaptcha{transform:scale(.74);height:58px}
 }
+
+/* iPhone polish — tuned from real-device capture */
+@media(max-width:520px){
+  .topbar{top:max(8px,env(safe-area-inset-top))}
+  .nav{width:calc(100% - 20px);height:58px;padding:7px 8px 7px 13px;border-radius:18px}
+  .hero{padding-top:170px;min-height:auto}
+  .eyebrow{width:auto;max-width:100%;padding:8px 13px;gap:7px;font-size:9px;line-height:1.35;letter-spacing:.11em}
+  .hero h1{max-width:390px;margin:28px auto 24px;font-size:clamp(45px,13vw,58px);line-height:.96;letter-spacing:-.06em;text-wrap:balance}
+  .hero-copy{max-width:390px;padding:0 5px;font-size:16px;line-height:1.55;text-wrap:pretty}
+  .hero-actions{gap:10px;margin:32px 0 72px}
+  .hero-actions .button{min-height:52px;border-radius:15px}
+  .hero-stage{height:340px}
+  .browser{height:315px;border-radius:22px;transform:none}
+  .browser-bar{height:39px;padding:0 11px}
+  .browser-body{padding:15px 17px}
+  .mini-hero{padding:27px 0 20px}
+  .mini-hero h2{font-size:23px;line-height:1.02}
+  .mini-hero p{font-size:10px}
+  .trust{padding:52px 0 70px}
+  .section{scroll-margin-top:85px}
+}
+@media(max-width:390px){
+  .hero{padding-top:160px}
+  .hero h1{font-size:43px}
+  .hero-copy{font-size:15px}
+  .eyebrow{font-size:8.5px}
+}
