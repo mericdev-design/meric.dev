@@ -221,3 +221,35 @@ button,a,input,select,textarea{min-width:0}
   .contact-form{padding:16px 14px 18px}
   .contact-form .g-recaptcha{transform:scale(.80);height:62px}
 }
+
+/* Final mobile contact gutters — equal left/right breathing room */
+@media(max-width:520px){
+  .contact-section .shell{
+    width:auto !important;
+    max-width:none !important;
+    margin-left:16px !important;
+    margin-right:16px !important;
+  }
+  .contact-grid,
+  .contact-form{
+    width:100% !important;
+    max-width:100% !important;
+    box-sizing:border-box;
+  }
+  .contact-form{
+    margin:0 !important;
+    padding-left:16px !important;
+    padding-right:16px !important;
+  }
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .contact-form .submit{
+    width:100% !important;
+    max-width:100% !important;
+    box-sizing:border-box;
+  }
+  .contact-form .g-recaptcha{
+    max-width:calc(100vw - 64px) !important;
+  }
+}
