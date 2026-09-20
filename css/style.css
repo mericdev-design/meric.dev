@@ -143,3 +143,23 @@ button,a,input,select,textarea{min-width:0}
   .hero-stage{height:365px}
   .browser{height:340px}
 }
+
+/* Mobile overflow fix based on full-page iPhone QA */
+@media(max-width:520px){
+  body,main,section,footer,.contact-section{width:100%;max-width:100%;overflow-x:clip}
+  .shell{width:auto;max-width:none;margin-left:15px;margin-right:15px}
+  .topbar .shell{width:auto;margin-left:15px;margin-right:15px}
+  .service-grid,.projects,.benefits,.pricing,.process,.faq,.contact-grid,.footer-grid{width:100%;max-width:100%;min-width:0}
+  .feature-card,.project,.benefits article,.pricing article,.contact-form,.process>*,
+  .faq>*,.contact-grid>*,.footer-grid>*{min-width:0;max-width:100%}
+  .pricing-extras{max-width:100%;overflow:hidden}
+  .pricing-extras .chips{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;width:100%}
+  .pricing-extras .chips span{display:flex;align-items:center;justify-content:center;min-width:0;white-space:normal;text-align:center;line-height:1.3;padding:10px 8px}
+  .contact-form input,.contact-form select,.contact-form textarea{max-width:100%}
+  .g-recaptcha{max-width:100%;overflow:hidden}
+  footer{margin:0;width:100%}
+  .footer-grid,.footline{width:auto;margin-left:15px;margin-right:15px}
+}
+@media(max-width:390px){
+  .pricing-extras .chips{grid-template-columns:1fr 1fr}
+}
